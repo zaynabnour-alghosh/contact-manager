@@ -14,7 +14,8 @@ class ContactController extends Controller
         if($action == "add"){
             $contact = new Contact;
         }else{
-            $contact = Contact::where("user_id",$user_id);
+            $id=$request->id;
+            $contact = Contact::find($id)->where("user_id",$user_id)->first();
         }
         $contact->name = $request->name;
         $contact->phone = $request->phone;
