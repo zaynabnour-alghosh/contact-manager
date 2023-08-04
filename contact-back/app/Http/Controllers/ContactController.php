@@ -60,4 +60,15 @@ class ContactController extends Controller
         ]);
     }
 
+    function deleteContact(Request $request){
+        $token = $request->token;
+        $user_id =Auth::getPayload($token)->get('sub');  
+        $contact = Contact::find($request->id)->delete();
+        return json_encode(["success" => true]);
+    }
+
+
+
+
+
 }

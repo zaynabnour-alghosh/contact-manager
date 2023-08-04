@@ -14,7 +14,7 @@ Route::group(["middleware" => "auth:api"], function(){
     });
     Route::group(["prefix" => "manage"], function(){
         Route::post('/contacts', [ContactController::class, "getContacts"]);
-        Route::get('/delete_contact/{id}', [HayalaController::class, "deleteContact"]);
+        Route::post('/delete_contact', [ContactController::class, "deleteContact"]);
         Route::post('/add_contact/{action?}', [ContactController::class, "addContact"]);
         Route::post('/update', [ContactController::class, "updateContact"]);
 
