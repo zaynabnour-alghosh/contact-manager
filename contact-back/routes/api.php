@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 
 //Authenticated APIS
 Route::group(["middleware" => "auth:api"], function(){
@@ -14,7 +15,7 @@ Route::group(["middleware" => "auth:api"], function(){
     Route::group(["prefix" => "manage"], function(){
         Route::get('/contacts/{id?}', [HayalaController::class, "getContacts"]);
         Route::get('/delete_contact/{id}', [HayalaController::class, "deleteContact"]);
-        Route::post('/add_update_contact/{id?}', [HayalaController::class, "addOrUpdateContact"]);
+        Route::post('/add_update_contact/{action?}', [ContactController::class, "addOrUpdateContact"]);
         
     });
     
