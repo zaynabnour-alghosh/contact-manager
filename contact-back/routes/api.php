@@ -13,10 +13,11 @@ Route::group(["middleware" => "auth:api"], function(){
         Route::post("refresh", [AuthController::class, "refresh"]);
     });
     Route::group(["prefix" => "manage"], function(){
-        Route::get('/contacts/{id?}', [HayalaController::class, "getContacts"]);
+        Route::post('/contacts', [ContactController::class, "getContacts"]);
         Route::get('/delete_contact/{id}', [HayalaController::class, "deleteContact"]);
-        Route::post('/add_update_contact/{action?}', [ContactController::class, "addOrUpdateContact"]);
-        
+        Route::post('/add_contact/{action?}', [ContactController::class, "addContact"]);
+        Route::post('/update', [ContactController::class, "updateContact"]);
+
     });
     
 

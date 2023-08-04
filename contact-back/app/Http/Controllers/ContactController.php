@@ -8,7 +8,7 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    function addOrUpdateContact(Request $request, $action = "add"){
+    function addContact(Request $request, $action = "add"){
         $token = $request->token;
         $user_id =Auth::getPayload($token)->get('sub');       
         if($action == "add"){
@@ -27,6 +27,36 @@ class ContactController extends Controller
         return response()->json([
             'status' => 'Success',
             'contact-data' => $contact
+        ]);
+    }
+    function updateContact(Request $request){
+        $token = $request->token;
+        $user_id =Auth::getPayload($token)->get('sub');       
+        $contact_id=$request->id;
+        $contact = Contact::find($contact_id);
+        $contact->name = $request->name;
+        $contact->phone = $request->phone;
+        $contact->address_longitude = $request->address_longitude;
+        $contact->address_lattitude = $request->address_lattitude;
+        $contact->user_id=$user_id;
+        $contact->save();
+        
+
+        return response()->json([
+            'status' => 'Success',
+            'contact-data' => $contact
+        ]);
+    }
+
+    function getContacts(Request $request){
+        $token = $request->token;
+        $user_id =Auth::getPayload($token)->get('sub');  
+        $contacts = Contact::all()->where("user_id",$user_id);
+        
+        
+        return response()->json([
+            'status' => 'Success',
+            'contact-data' => $contacts
         ]);
     }
 
