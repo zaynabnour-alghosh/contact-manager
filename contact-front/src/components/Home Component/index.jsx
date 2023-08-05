@@ -1,15 +1,17 @@
 import React from "react";
 import "./Home.css";
-import ContactContainer from "../ContactContainer Component";
+// import ContactContainer from "../ContactContainer Component";
 import Header from "../Header Component";
 import Login from "../Login Component";
 import Signup from "../Signup Component";
-import ContactForm from "../ContactForm Component";
+// import ContactForm from "../ContactForm Component";
 const Home=({contact})=>{
-    const loggedIn=true;
+    // const loggedIn=true;
     return(
-        <div className="home">
-            <Header />    
+        <div className="homes">
+            <Login />
+            <Signup />
+            {/* <Header />    
             {(!loggedIn)?<>            
             <Login />
             <Signup />
@@ -23,10 +25,9 @@ const Home=({contact})=>{
             <ContactContainer contact={contact} />
             </div>  
             </div>                      
-            </>}                        
+            </>}                         */}
         </div>
         
     );
 }
 export default Home;
-

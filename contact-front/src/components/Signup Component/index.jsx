@@ -7,15 +7,15 @@ const Signup=()=>{
             <div className="container">                
                 <div className="inputs">
                     <label>Full Name</label>
-                    <input type="text" placeHolder="Name" />
+                    <input type="text" placeholder="Name" />
                 </div> 
                 <div className="inputs">
                     <label>Email</label>
-                    <input type="text" placeHolder="Email" />
+                    <input type="text" placeholder="Email" />
                 </div> 
                 <div className="inputs">                    
                 <label>Password</label>
-                    <input type="password" placeHolder="Password" />
+                    <input type="password" placeholder="Password" />
                 </div>
                 <button className="Sign">Sign Up</button>
             </div>
