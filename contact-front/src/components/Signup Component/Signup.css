@@ -1,0 +1,54 @@
+.Signup{
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+}
+.TitleSign{
+    font-weight: 700;
+    font-size: 28px;
+    padding-bottom:20px;
+    color:rgb(25, 25, 106);
+}
+label{
+    font-size: 22px;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+} 
+input{
+    height:30px;
+    border-radius: 5px;
+    border-color: transparent;
+    ;
+}
+.container{
+    height:300px;
+    width:250px;
+    background-color: rgb(129, 129, 169);
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    padding:10px;
+    border-radius: 15px;   
+    box-shadow: 2px 2px 2px 2px rgb(103, 114, 123); 
+}
+.Sign{
+    margin-top:25px;
+    width:50%;
+    border-radius: 5px;
+    height:30px;
+    border-color: transparent;
+    align-self: center;
+    color:rgb(25, 25, 106);
+    font-weight:600;
+}
+button:hover{
+background-color: rgb(47, 47, 95);
+color:aliceblue
+}
