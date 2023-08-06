@@ -17,17 +17,27 @@ const Login=()=>{
             console.log(user);
             setData({email:"",password:""});
             localStorage.setItem("token",user.token);
+            const userId=user.user.id
+            console.log(userId)
             if(user){
                 console.log("loggedIn:true");
                 localStorage.setItem("loggedIn","true")
             }
-           
+            // const token=localStorage.getItem("token");
+            const response2 = await axios.post("http://127.0.0.1:8000/api/contacts",userId);
+            console.log(response2.data);
             
         
         }catch(e){
             console.log(e)
         }
     }
+    
+    
+    
+            
+            
+
     return(
         <div className="Login">
             <div className="TitleLog">LOG IN</div>

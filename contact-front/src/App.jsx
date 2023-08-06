@@ -1,28 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header Component";
 import Home from "./components/Home Component";
+// import { useState } from "react";
 import Main from "./components/Main Component";
 import { BrowserRouter,Routes,Route,createBrowserRouter } from "react-router-dom";
 import Login from "./components/Login Component";
 import Signup from "./components/Signup Component";
 import "./App.css";
 const App=()=>{
-  
-  const contact={
-    "name": "John Doe",
-    "phone": "+ (961) 3 522523",
-    "address_longitude": "54",
-    "address_lattitude": "85"
-  }
-  const loggedIn=true
+  // const [contacts,setContacts]=useState([]);
+ 
+  // const contact={
+  //   "name": "John Doe",
+  //   "phone": "+ (961) 3 522523",
+  //   "address_longitude": "54",
+  //   "address_lattitude": "85"
+  // }
+  // const loggedIn=true
    return (
     <div className="homex">
       <Header />
      <BrowserRouter> 
-      <Routes>
-        <Route path='/' element={<Login contact={contact}/>} />
-       
-        <Route path="/main" element={<Main contact={contact} />} />
+      <Routes>     
+        <Route path="/" element={<Main/>} />
         
       </Routes>
     </BrowserRouter> 
