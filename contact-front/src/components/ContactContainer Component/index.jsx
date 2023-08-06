@@ -22,7 +22,7 @@ const ContactContainer=({contacts},{setContacts})=>{
             <div className="listC">
                 
                     { contacts_array.map((contact,index)=>
-                    (<span  key={index} ><ContactCard   setContacts={setContacts} contact={contact}/> </span>)
+                    (<span  key={index} ><ContactCard setContacts={setContacts} contact={contact}/> </span>)
                     )}
          
             </div>

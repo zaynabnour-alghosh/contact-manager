@@ -21,9 +21,7 @@ const ContactForm=({setContacts})=>{
         console.log(data)
         try{
           const response = await axios.post("http://127.0.0.1:8000/api/add_contact", data);
-          console.log(response);
-        //   setContacts((contacts)=>[...contacts, response.data]);
-        
+          console.log(response);        
             const response2 = await axios.get("http://127.0.0.1:8000/api/contacts");
             setContacts(response2.data)
         
