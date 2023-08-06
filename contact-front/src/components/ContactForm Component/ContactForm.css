@@ -11,23 +11,7 @@
 label{
     font-size: 22px;
 }
-.btnLogout{
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    font-size: 15px;
-    letter-spacing: 2px;
-    font-weight: 900;
-    color: #b6b5bc;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px; 
-    width: 120px;
-    border-color: transparent; 
-    align-self: center;
-    margin-bottom: 20px;
-   
 
-}
 .inputF{
     display: flex;
     flex-direction: column;
