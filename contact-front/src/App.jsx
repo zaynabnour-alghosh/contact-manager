@@ -2,9 +2,9 @@ import React from "react";
 import Header from "./components/Header Component";
 import Home from "./components/Home Component";
 import Main from "./components/Main Component";
-// import { BrowserRouter,Routes,Route,createBrowserRouter } from "react-router-dom";
-// import Login from "./components/Login Component";
-// import Signup from "./components/Signup Component";
+import { BrowserRouter,Routes,Route,createBrowserRouter } from "react-router-dom";
+import Login from "./components/Login Component";
+import Signup from "./components/Signup Component";
 import "./App.css";
 const App=()=>{
   
@@ -18,25 +18,25 @@ const App=()=>{
    return (
     <div className="homex">
       <Header />
-    {/* <BrowserRouter>
+     <BrowserRouter> 
       <Routes>
-        <Route path='/' element={<Home contact={contact}/>} />
+        <Route path='/' element={<Login contact={contact}/>} />
        
         <Route path="/main" element={<Main contact={contact} />} />
         
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter> 
 
 
    
       
-    {(!loggedIn)?<>  
-    <Home contact={contact}/>          
+    {/* {(!loggedIn)?<>   */}
+    {/* <Home contact={contact}/>           */}
     {/* {/* <Login /> */}
     {/* <Signup />  */}
-    </>:
-    <> 
-   <Main contact={contact}/> 
+    {/* </>: */}
+    {/* <>  */}
+   {/* <Main contact={contact}/>  */}
     {/* <div className="contentD">
     <div className="FormSpace">
     <ContactForm />
@@ -45,7 +45,7 @@ const App=()=>{
     <ContactContainer contact={contact} />
     </div>  
     </div>                       */}
-    </>}                        
+    {/* </>}                         */}
 </div>
     
   );
