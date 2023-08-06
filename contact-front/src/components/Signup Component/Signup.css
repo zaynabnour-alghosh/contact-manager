@@ -1,11 +1,8 @@
-.Signup{
-    
-    
+.Signup{  
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-
 }
 .TitleSign{
     font-weight: 700;
@@ -49,6 +46,6 @@ input{
     font-weight:600;
 }
 button:hover{
-background-color: rgb(47, 47, 95);
-color:aliceblue
+    background-color: rgb(47, 47, 95);
+    color:aliceblue
 }

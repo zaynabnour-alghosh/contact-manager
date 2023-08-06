@@ -6,6 +6,5 @@ const Header=()=>{
          <span>Contact Manager App</span>         
          </div>
        );
-
 }
 export default Header;

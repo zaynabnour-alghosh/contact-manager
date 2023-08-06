@@ -1,17 +1,12 @@
-.form{
-       
+.form{       
     display: flex;
     flex-direction: column;    
     margin-top: 25px;
     align-content: center;
-    
-
 }
-
 label{
     font-size: 22px;
 }
-
 .inputF{
     display: flex;
     flex-direction: column;
@@ -21,7 +16,6 @@ input{
     height:30px;
     border-radius: 5px;
     border-color: transparent;
-    ;
 }
 .containerF{
     height:400px;

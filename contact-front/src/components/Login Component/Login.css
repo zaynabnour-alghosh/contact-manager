@@ -1,11 +1,8 @@
 .Login{
-    
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-
 }
 .TitleLog{
     font-weight: 700;
@@ -25,7 +22,6 @@ input{
     height:30px;
     border-radius: 5px;
     border-color: transparent;
-    ;
 }
 .container{
     height:250px;
@@ -50,5 +46,5 @@ input{
 }
 button:hover{
 background-color: rgb(47, 47, 95);
-color:aliceblue
+color:aliceblue;
 }
