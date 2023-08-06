@@ -4,6 +4,7 @@ import Home from "./components/Home Component";
 // import { useState } from "react";
 import Main from "./components/Main Component";
 import { BrowserRouter,Routes,Route,createBrowserRouter } from "react-router-dom";
+import Contact from "./components/Contact";
 import Login from "./components/Login Component";
 import Signup from "./components/Signup Component";
 import "./App.css";
@@ -23,6 +24,8 @@ const App=()=>{
      <BrowserRouter> 
       <Routes>     
         <Route path="/" element={<Main/>} />
+        <Route path=":id" element={<Contact/>}/>
+        
         
       </Routes>
     </BrowserRouter> 

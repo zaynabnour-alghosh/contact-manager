@@ -23,7 +23,7 @@ const Main=()=>{
                      <ContactForm setContacts={setContacts}/>
             </div>
             <div className="ContactSpace">
-               <ContactContainer contacts={contacts} />
+               <ContactContainer contacts={contacts} setContacts={setContacts}/>
             </div>  
             </div>    
         </div>
